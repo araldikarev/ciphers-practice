@@ -107,11 +107,10 @@ class AffineCipher(AlgorithmBase):
         :return: Расшифрованная строка
         :rtype: str
         """
-
         len_of_alphabet = len(alphabet)
 
         if math.gcd(a, len_of_alphabet) != 1:
-            raise Exception(
+            raise ValueError(
                 "Параметр `a` должен иметь НОД(a, длина алфавита) равный единице."
             )
 

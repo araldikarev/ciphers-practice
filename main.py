@@ -2,6 +2,8 @@ from algorithms.base_algorithm import AlgorithmBase
 from algorithms.replacement_cipher import SimpleReplacementCipher
 from algorithms.affine_cipher import AffineCipher
 from algorithms.recursive_affine_cipher import RecursiveAffineCipher
+from algorithms.hill_cipher import HillCipher
+from algorithms.recursive_hill_cipher import RecursiveHillCipher
 
 from InquirerPy import inquirer
 from prompt_toolkit.validation import Validator, ValidationError
@@ -12,7 +14,7 @@ print(f"Стандартный алфавит: {alphabet}\n")
 
 
 def main():
-    ciphers = [SimpleReplacementCipher, AffineCipher, RecursiveAffineCipher]
+    ciphers = [SimpleReplacementCipher, AffineCipher, RecursiveAffineCipher, HillCipher, RecursiveHillCipher]
 
     dict_parameters = {}
 
