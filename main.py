@@ -4,6 +4,9 @@ from algorithms.affine_cipher import AffineCipher
 from algorithms.recursive_affine_cipher import RecursiveAffineCipher
 from algorithms.hill_cipher import HillCipher
 from algorithms.recursive_hill_cipher import RecursiveHillCipher
+from algorithms.vigenere_cipher_with_repeating_key_cipher import VigenereCipherWithRepeatingKeyCipher
+from algorithms.vigenere_cipher_with_plain_text_autokey_cipher import VigenereCipherWithPlainTextAutokeyCipher
+from algorithms.vigenere_cipher_with_cipher_text_autokey_cipher import VigenereCipherWithCipherTextAutokeyCipher
 
 from InquirerPy import inquirer
 from prompt_toolkit.validation import Validator, ValidationError
@@ -14,7 +17,16 @@ print(f"Стандартный алфавит: {alphabet}\n")
 
 
 def main():
-    ciphers = [SimpleReplacementCipher, AffineCipher, RecursiveAffineCipher, HillCipher, RecursiveHillCipher]
+    ciphers = [
+        SimpleReplacementCipher,
+        AffineCipher,
+        RecursiveAffineCipher,
+        HillCipher,
+        RecursiveHillCipher,
+        VigenereCipherWithRepeatingKeyCipher,
+        VigenereCipherWithPlainTextAutokeyCipher,
+        VigenereCipherWithCipherTextAutokeyCipher,
+    ]
 
     dict_parameters = {}
 
